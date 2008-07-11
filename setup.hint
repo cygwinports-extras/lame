@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin gtk+ libmp3lame0 libncurses8
+requires: cygwin libmp3lame0 libncurses8
 sdesc: "LAME Ain't a MP3 recorder (utilities)"
 ldesc: "This package includes a library, two console apps, and
 a GTK+ app for handling MP3 files."

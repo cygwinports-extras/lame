@@ -1,5 +1,5 @@
 category: Audio Libs
-requires: cygwin
+requires: cygwin libmp3lame0
 external-source: lame
 sdesc: "LAME Ain't a MP3 recorder (development)"
 ldesc: "This package includes a library, two console apps, and
