@@ -1,6 +1,6 @@
-category: Audio Libs
+category: Audio
 requires: cygwin
 external-source: lame
-sdesc: "LAME Ain't a MP3 recorder (runtime)"
-ldesc: "This package includes a library, two console apps, and
-a GTK+ app for handling MP3 files."
+sdesc: "MP3 encoder library (runtime)"
+ldesc: "LAME is a LGPL MP3 encoder, with speed and quality to rival and 
+often surpass all commercial competitiors."

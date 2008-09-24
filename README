@@ -1,21 +1,18 @@
 lame
 -------------------------------------------
-LAME Ain't an MP3 Encoder
-This package includes a library, two console apps, and
-a GTK+ app for handling MP3 files.
+LAME is a LGPL MP3 encoder.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  glib-1.2.10-4
-  gtk+-1.2.10-3
   libncurses8-5.5-3
+  libsndfile1-1.0.17-2
 
 Build requirements:
 (besides corresponding devel packages)
   autoconf2.5-2.61-1
   automake1.10-1.10.1-1
-  binutils-20080523-2
-  cygport-0.3.12-1
+  binutils-20080624-2
+  cygport-0.4.0-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   libtool-2.2.2-2
@@ -32,17 +29,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack lame-3.98-1-src.tar.bz2
+  unpack lame-3.98.2-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./lame-3.98-1.cygport all
+  cygport ./lame-3.98.2-1.cygport all
 
 This will create:
-  /usr/src/lame-3.98-1-src.tar.bz2
-  /usr/src/lame-3.98-1.tar.bz2
-  /usr/src/libmp3lame-devel-3.98-1.tar.bz2
-  /usr/src/libmp3lame0-3.98-1.tar.bz2
+  /usr/src/lame-3.98.2-1-src.tar.bz2
+  /usr/src/lame-3.98.2-1.tar.bz2
+  /usr/src/libmp3lame-devel-3.98.2-1.tar.bz2
+  /usr/src/libmp3lame0-3.98.2-1.tar.bz2
 
 -------------------------------------------
 
@@ -51,27 +48,24 @@ Files included in the binary packages:
 (lame)
   /usr/bin/lame.exe
   /usr/bin/mp3rtp.exe
-  /usr/bin/mp3x.exe
-  /usr/share/doc/lame-3.98/COPYING
-  /usr/share/doc/lame-3.98/ChangeLog
-  /usr/share/doc/lame-3.98/HACKING
-  /usr/share/doc/lame-3.98/INSTALL
-  /usr/share/doc/lame-3.98/LICENSE
-  /usr/share/doc/lame-3.98/README
-  /usr/share/doc/lame-3.98/TODO
-  /usr/share/doc/lame-3.98/html/LameDLLInterface.htm
-  /usr/share/doc/lame-3.98/html/basic.html
-  /usr/share/doc/lame-3.98/html/contributors.html
-  /usr/share/doc/lame-3.98/html/examples.html
-  /usr/share/doc/lame-3.98/html/history.html
-  /usr/share/doc/lame-3.98/html/id3.html
-  /usr/share/doc/lame-3.98/html/index.html
-  /usr/share/doc/lame-3.98/html/lame.css
-  /usr/share/doc/lame-3.98/html/lameGUI.html
-  /usr/share/doc/lame-3.98/html/modes.html
-  /usr/share/doc/lame-3.98/html/node6.html
-  /usr/share/doc/lame-3.98/html/presets.html
-  /usr/share/doc/lame-3.98/html/switchs.html
+  /usr/share/doc/lame-3.98.2/COPYING
+  /usr/share/doc/lame-3.98.2/ChangeLog
+  /usr/share/doc/lame-3.98.2/HACKING
+  /usr/share/doc/lame-3.98.2/INSTALL
+  /usr/share/doc/lame-3.98.2/LICENSE
+  /usr/share/doc/lame-3.98.2/README
+  /usr/share/doc/lame-3.98.2/TODO
+  /usr/share/doc/lame-3.98.2/html/basic.html
+  /usr/share/doc/lame-3.98.2/html/contributors.html
+  /usr/share/doc/lame-3.98.2/html/examples.html
+  /usr/share/doc/lame-3.98.2/html/history.html
+  /usr/share/doc/lame-3.98.2/html/id3.html
+  /usr/share/doc/lame-3.98.2/html/index.html
+  /usr/share/doc/lame-3.98.2/html/lame.css
+  /usr/share/doc/lame-3.98.2/html/modes.html
+  /usr/share/doc/lame-3.98.2/html/node6.html
+  /usr/share/doc/lame-3.98.2/html/presets.html
+  /usr/share/doc/lame-3.98.2/html/switchs.html
   /usr/share/man/man1/lame.1.gz
 
 (libmp3lame0)
@@ -86,6 +80,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 3.98.2-1 -----
+Version bump.  Disabled gtk1 interface.
 
 ----- version 3.98-1 -----
 Version bump.
