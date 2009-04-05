@@ -3,20 +3,21 @@ lame
 LAME is a LGPL MP3 encoder.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libncurses8-5.5-3
-  libsndfile1-1.0.17-2
+  cygwin-1.7.0-44
+  libgcc1-4.3.2-2
+  libncurses9-5.7-13
+  libsndfile1-1.0.19-10
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.61-1
-  automake1.10-1.10.1-1
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.0-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  libtool-2.2.2-2
-  make-3.81-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  libtool-2.2.7a-12
+  make-3.81-2
   nasm-2.02-1
   sed-4.1.5-2
 
@@ -48,24 +49,23 @@ Files included in the binary packages:
 (lame)
   /usr/bin/lame.exe
   /usr/bin/mp3rtp.exe
-  /usr/share/doc/lame-3.98.2/COPYING
-  /usr/share/doc/lame-3.98.2/ChangeLog
-  /usr/share/doc/lame-3.98.2/HACKING
-  /usr/share/doc/lame-3.98.2/INSTALL
-  /usr/share/doc/lame-3.98.2/LICENSE
-  /usr/share/doc/lame-3.98.2/README
-  /usr/share/doc/lame-3.98.2/TODO
-  /usr/share/doc/lame-3.98.2/html/basic.html
-  /usr/share/doc/lame-3.98.2/html/contributors.html
-  /usr/share/doc/lame-3.98.2/html/examples.html
-  /usr/share/doc/lame-3.98.2/html/history.html
-  /usr/share/doc/lame-3.98.2/html/id3.html
-  /usr/share/doc/lame-3.98.2/html/index.html
-  /usr/share/doc/lame-3.98.2/html/lame.css
-  /usr/share/doc/lame-3.98.2/html/modes.html
-  /usr/share/doc/lame-3.98.2/html/node6.html
-  /usr/share/doc/lame-3.98.2/html/presets.html
-  /usr/share/doc/lame-3.98.2/html/switchs.html
+  /usr/share/doc/lame/COPYING
+  /usr/share/doc/lame/ChangeLog
+  /usr/share/doc/lame/HACKING
+  /usr/share/doc/lame/LICENSE
+  /usr/share/doc/lame/README
+  /usr/share/doc/lame/TODO
+  /usr/share/doc/lame/html/basic.html
+  /usr/share/doc/lame/html/contributors.html
+  /usr/share/doc/lame/html/examples.html
+  /usr/share/doc/lame/html/history.html
+  /usr/share/doc/lame/html/id3.html
+  /usr/share/doc/lame/html/index.html
+  /usr/share/doc/lame/html/lame.css
+  /usr/share/doc/lame/html/modes.html
+  /usr/share/doc/lame/html/node6.html
+  /usr/share/doc/lame/html/presets.html
+  /usr/share/doc/lame/html/switchs.html
   /usr/share/man/man1/lame.1.gz
 
 (libmp3lame0)
@@ -81,17 +81,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 3.98.2-1 -----
-Version bump.  Disabled gtk1 interface.
-
------ version 3.98-1 -----
-Version bump.
-
------ version 3.97-1 -----
-Version bump.
-
------ version 3.96.1-1 -----
-Initial release for Cygwin.
+----- version 3.98.2-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

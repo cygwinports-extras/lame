@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin
+requires: cygwin libgcc1
 external-source: lame
 sdesc: "MP3 encoder library (runtime)"
 ldesc: "LAME is a LGPL MP3 encoder, with speed and quality to rival and 

@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libmp3lame0 libncurses8 libsndfile1
+requires: cygwin libgcc1 libmp3lame0 libncurses9 libsndfile1
 sdesc: "MP3 encoder utilities"
 ldesc: "LAME is a LGPL MP3 encoder, with speed and quality to rival and 
 often surpass all commercial competitiors."

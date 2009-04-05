@@ -26,8 +26,3 @@ CYGCONF_ARGS="
 # libmp3lame/i386
 # alternative: mkdir ${B}/libmp3lame/i386/.libs before cygmake
 MAKEOPTS+=" -j1"
-
-src_install() {
-	cd ${B}
-	cyginstall pkgdocdir=/usr/share/doc/${P}
-}
