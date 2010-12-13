@@ -1,6 +1,5 @@
 category: Audio
-requires: libgcc1
-external-source: lame
-sdesc: "MP3 encoder library (runtime)"
+requires: libmp3lame0 libncurses10 libsndfile1
+sdesc: "MP3 encoder utilities"
 ldesc: "LAME is a LGPL MP3 encoder, with speed and quality to rival and 
 often surpass all commercial competitiors."
