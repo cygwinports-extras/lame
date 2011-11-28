@@ -1,12 +1,7 @@
 DESCRIPTION="LAME Ain't a MP3 recorder"
 HOMEPAGE="http://lame.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lame/${P}.tar.gz"
-
-PATCH_URI="
-	mirror://portage/media-sound/${PN}/files/${PN}-3.98-shared-frontend.patch
-	mirror://portage/media-sound/${PN}/files/${PN}-3.98-gtk-path.patch
-	mirror://portage/media-sound/${PN}/files/${PN}-3.98.2-get_audio.patch
-"
+PATCH_URI="mirror://portage/media-sound/${PN}/files/${PN}-3.98-gtk-path.patch"
 
 PKG_NAMES="${PN} libmp3lame0 libmp3lame-devel"
 lame_CONTENTS="usr/bin/*.exe usr/share/"
@@ -14,8 +9,10 @@ libmp3lame0_CONTENTS="usr/bin/*-0.dll"
 libmp3lame_devel_CONTENTS='usr/include/ usr/lib/'
 
 ACLOCAL_FLAGS="-I ."
+# mp3x: uses gtk-1.2
 CYGCONF_ARGS="
 	--enable-shared
+	--enable-dynamic-frontends
 	--enable-nasm
 	--enable-mp3rtp
 	--disable-mp3x
