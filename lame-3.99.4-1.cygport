@@ -29,3 +29,5 @@ src_compile() {
 	mkdir -p libmp3lame/i386/.libs	# fix parallel make
 	cygmake
 }
+
+KEEP_LA_FILES="none"
