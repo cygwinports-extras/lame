@@ -1,6 +1,0 @@
-category: Audio
-requires: libmp3lame0
-external-source: lame
-sdesc: "MP3 encoder library (development)"
-ldesc: "LAME is a LGPL MP3 encoder, with speed and quality to rival and 
-often surpass all commercial competitiors."
