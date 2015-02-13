@@ -1,0 +1,11 @@
+--- origsrc/lame-3.99.5/frontend/lametime.c	2011-05-07 11:05:17.000000000 -0500
++++ src/lame-3.99.5/frontend/lametime.c	2015-02-13 00:22:28.530569900 -0600
+@@ -136,7 +136,7 @@ lame_set_stream_binary_mode(FILE * const
+ #elif defined __BORLANDC__
+     setmode(_fileno(fp), O_BINARY);
+ #elif defined __CYGWIN__
+-    setmode(fileno(fp), _O_BINARY);
++    setmode(fileno(fp), O_BINARY);
+ #elif defined _WIN32
+     _setmode(_fileno(fp), _O_BINARY);
+ #else

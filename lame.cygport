@@ -1,12 +1,13 @@
 NAME="lame"
 VERSION=3.99.5
-RELEASE=1
+RELEASE=2
 CATEGORY="Audio"
 SUMMARY="MP3 encoder"
 DESCRIPTION="LAME is a LGPL MP3 encoder, with speed and quality to rival and
 often surpass all commercial competitiors."
 HOMEPAGE="http://lame.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lame/lame-${VERSION}.tar.gz"
+PATCH_URI="3.99.5-cygwin-fcntl.patch"
 
 PKG_NAMES="lame libmp3lame0 libmp3lame-devel"
 lame_CONTENTS="usr/bin/*.exe usr/share/"
@@ -26,6 +27,7 @@ CYGCONF_ARGS="
 	--disable-debug
 	--with-fileio=sndfile
 	ac_cv_header_winsock2_h=no
+	${ARCH_i686+ac_cv_header_xmmintrin_h=no}
 "
 
 src_compile() {
