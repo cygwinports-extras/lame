@@ -1,6 +1,6 @@
 NAME="lame"
 VERSION=3.99.5
-RELEASE=2
+RELEASE=3
 CATEGORY="Audio"
 SUMMARY="MP3 encoder"
 DESCRIPTION="LAME is a LGPL MP3 encoder, with speed and quality to rival and
@@ -38,5 +38,3 @@ src_compile() {
 	mkdir -p libmp3lame/i386/.libs	# fix parallel make
 	cygmake
 }
-
-KEEP_LA_FILES="none"
