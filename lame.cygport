@@ -1,40 +1,39 @@
 NAME="lame"
-VERSION=3.99.5
-RELEASE=3
+VERSION=3.100
+RELEASE=1
 CATEGORY="Audio"
 SUMMARY="MP3 encoder"
 DESCRIPTION="LAME is a LGPL MP3 encoder, with speed and quality to rival and
 often surpass all commercial competitiors."
 HOMEPAGE="http://lame.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lame/lame-${VERSION}.tar.gz"
-PATCH_URI="3.99.5-cygwin-fcntl.patch"
+PATCH_URI="
+	3.99.5-cygwin-fcntl.patch
+	3.100-symbols.patch
+"
 
-PKG_NAMES="lame libmp3lame0 libmp3lame-devel"
-lame_CONTENTS="usr/bin/*.exe usr/share/"
+PKG_NAMES="lame lame-mp3x libmp3lame0 libmp3lame-devel"
+lame_CONTENTS="
+	usr/bin/lame.exe
+	usr/bin/mp3rtp.exe
+	usr/share/doc/lame/
+	usr/share/man/man1/lame.1*
+"
+lame_mp3x_CONTENTS="usr/bin/mp3x.exe"
 libmp3lame0_CATEGORY="Libs"
 libmp3lame0_SUMMARY="MP3 encoder library"
-libmp3lame0_CONTENTS="usr/bin/*-0.dll"
+libmp3lame0_CONTENTS="usr/bin/cygmp3lame-0.dll"
 libmp3lame_devel_CATEGORY="Libs"
 libmp3lame_devel_SUMMARY=${libmp3lame0_SUMMARY}
-libmp3lame_devel_CONTENTS='usr/include/ usr/lib/'
+libmp3lame_devel_CONTENTS="usr/include/lame/ usr/lib/libmp3lame.dll.a"
 
-# mp3x: uses gtk-1.2
 CYGCONF_ARGS="
 	--enable-dynamic-frontends
 	--enable-nasm
 	--enable-mp3rtp
-	--disable-mp3x
+	--enable-mp3x
 	--disable-debug
 	--with-fileio=sndfile
 	ac_cv_header_winsock2_h=no
 	${ARCH_i686+ac_cv_header_xmmintrin_h=no}
 "
-
-src_compile() {
-	cd ${S}
-	cygautoreconf
-	cd ${B}
-	cygconf
-	mkdir -p libmp3lame/i386/.libs	# fix parallel make
-	cygmake
-}
